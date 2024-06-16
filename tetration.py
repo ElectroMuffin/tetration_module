@@ -7,7 +7,8 @@ def tetrate(num, tet_by):
         return num ** tetrate(num, tet_by - 1)
 
 def tetrate_iteration(num, tet_by):
-    while tet_by > 0:
-        num = num ** num
-        tet_by = tet_by - 1
-    return num
+    result = num
+    while tet_by > 1:
+        result = result ** num
+        tet_by -= 1
+    return result
